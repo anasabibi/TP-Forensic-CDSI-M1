@@ -1,0 +1,21 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Fri May  1 01:25:16 2026
+Invocation: foremost -t zip,rar -i dumps/exercice3.raw -o extractions/foremost_out 
+Output directory: /mnt/c/Users/hp5/Downloads/TP-Forensic-CDSI-M1/extractions/foremost_out
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: dumps/exercice3.raw
+Start: Fri May  1 01:25:16 2026
+Length: 1023 MB (1073676288 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+Finish: Fri May  1 01:25:52 2026
+
+0 FILES EXTRACTED
+	
+------------------------------------------------------------------
+
+Foremost finished at Fri May  1 01:25:52 2026

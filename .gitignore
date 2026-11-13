@@ -1,0 +1,19 @@
+# Fichiers volumineux (dumps mémoire / disques) non acceptés par GitHub (> 100 Mo)
+*.raw
+*.dmp
+*.vmem
+*.dd
+*.img
+
+# Python cache & environnements
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Fichiers système
+Thumbs.db
+Desktop.ini
+.DS_Store

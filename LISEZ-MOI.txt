@@ -1,0 +1,65 @@
+==============================================================
+  TP — Forensic Mémoire — Master CDSI M1
+==============================================================
+
+Contenu de l'archive :
+
+  POLY-ETUDIANT.pdf      Polycopié à lire en premier (5 énoncés,
+                         cheatsheet Volatility 2/3, section YARA)
+  scripts/vol.sh         Wrapper conteneur (macOS / Linux)
+  scripts/vol.ps1        Wrapper conteneur (Windows / PowerShell)
+  dumps/exercice1.raw    Dump pour l'Exercice 1 (Win7 SP1 x64)
+  dumps/exercice2.raw    Dump pour l'Exercice 2 (Win7 SP1 x86)
+  dumps/exercice3.raw    Dump pour l'Exercice 3 (Win7 SP1 x64)
+  dumps/exercice4.raw    Dump pour les Exercices 4 et 5 (Win XP SP3 x86)
+
+--------------------------------------------------------------
+  Démarrage rapide
+--------------------------------------------------------------
+
+1. Installer Docker Desktop (si ce n'est pas déjà fait).
+
+2. Récupérer l'image officielle :
+
+       docker pull cincan/volatility:latest
+       docker pull cincan/volatility3:latest    (optionnel)
+
+3. Se placer dans le répertoire qui contient le dump à analyser :
+
+       cd dumps
+
+4. Lancer une commande Volatility via le wrapper :
+
+       chmod +x ../scripts/vol.sh
+       ../scripts/vol.sh -f /data/exercice1.raw imageinfo
+
+   Le wrapper monte automatiquement le répertoire courant
+   sur /data en lecture seule à l'intérieur du conteneur :
+   le dump ne pourra pas être altéré pendant l'analyse.
+
+5. Pour utiliser Volatility 3 à la place :
+
+       VOL_IMAGE=cincan/volatility3 ../scripts/vol.sh \
+           -f /data/exercice1.raw windows.info
+
+--------------------------------------------------------------
+  Empreintes de référence
+--------------------------------------------------------------
+
+Les empreintes SHA-256 vous seront communiquées séparément
+par votre enseignant. Toute divergence signale une corruption
+ou une modification — refaites l'extraction.
+
+--------------------------------------------------------------
+  Rappels
+--------------------------------------------------------------
+
+- Ne modifiez JAMAIS un fichier .raw.
+- Toute extraction doit être placée dans un sous-dossier
+  dédié et accompagnée de son SHA-256.
+- Aucune connexion réseau sortante vers les IPs identifiées
+  dans les dumps.
+- Compte-rendu PDF unique par exercice ; consigner toutes les
+  commandes utilisées en annexe.
+
+Bon courage.
